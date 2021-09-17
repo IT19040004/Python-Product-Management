@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+
+    <div class="row justify-content-center">
+
+      <div class="col-md-5">
+
+        <a href="{% url 'showProducts' %}" class="btn btn-primary mt-5">Back</a>
+
+        <div class="card m-3" style="width: 18rem;">
+
+            <img src="{{ eachproduct.image.url }}" class="card-img-top" alt="...">
+
+            <div class="card-body">
+
+            <h5 class="card-title m-1">{{ eachproduct.name }}</h5>
+
+            <h4 class="card-subtitle m-1">{{ eachproduct.price }}</h4>
+
+            <p class="card-text m-1">{{ eachproduct.description}}</p>
+
+            <p class="card-text mt-1">{{ eachproduct.create_at}}</p>
+
+            <a href="#" class="btn btn-danger m-1">Delete</a>
+
+            <a href="#" class="btn btn-primary m-1">Update</a>
+
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}
